@@ -1,0 +1,1120 @@
+form 0 to 10
+
+1)
+ 
+bandit0@bandit:~$ ls
+readme
+bandit0@bandit:~$ hostname -I
+10.0.1.148 
+bandit0@bandit:~$ whoami
+bandit0
+bandit0@bandit:~$ ls -la /
+total 2196
+drwxr-xr-x  20 root root    4096 Oct 13 06:19 .
+drwxr-xr-x  20 root root    4096 Oct 13 06:19 ..
+lrwxrwxrwx   1 root root       7 Aug 10 12:21 bin -> usr/bin
+drwxr-xr-x   4 root root    4096 Aug 10 12:25 boot
+drwxr-xr-x  16 root root    3240 Oct 13 06:19 dev
+drwxr-xr-x 110 root root    4096 Oct 21 23:52 etc
+drwxr-xr-x  49 root root    4096 Sep  1 06:30 home
+drwxr-xr-x   8 root root    4096 Sep  1 06:30 krypton
+lrwxrwxrwx   1 root root       7 Aug 10 12:21 lib -> usr/lib
+lrwxrwxrwx   1 root root       9 Aug 10 12:21 lib32 -> usr/lib32
+lrwxrwxrwx   1 root root       9 Aug 10 12:21 lib64 -> usr/lib64
+lrwxrwxrwx   1 root root      10 Aug 10 12:21 libx32 -> usr/libx32
+drwx------   2 root root   16384 Aug 10 12:23 lost+found
+drwxr-xr-x   2 root root    4096 Aug 10 12:21 media
+drwxr-xr-x   2 root root    4096 Aug 10 12:21 mnt
+drwxr-xr-x   7 root root    4096 Sep  1 06:26 opt
+dr-xr-xr-x 910 root root       0 Oct 13 06:17 proc
+drwx------   7 root root    4096 Oct 24 13:16 root
+drwxr-xr-x  27 root root    1000 Oct 27 07:28 run
+lrwxrwxrwx   1 root root       8 Aug 10 12:21 sbin -> usr/sbin
+drwxr-xr-x   8 root root    4096 Aug 10 12:25 snap
+drwxr-xr-x   2 root root    4096 Aug 10 12:21 srv
+dr-xr-xr-x  13 root root       0 Oct 13 06:17 sys
+drwxrwx-wt   1 root root 2166784 Oct 27 15:24 tmp
+drwxr-xr-x  14 root root    4096 Sep  1 06:30 usr
+drwxr-xr-x  13 root root    4096 Sep  1 06:30 var
+bandit0@bandit:~$ ls
+readme
+bandit0@bandit:~$ cat readme 
+NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+2)
+
+bandit1@bandit:~$ ls
+-
+bandit1@bandit:~$ pwd
+/home/bandit1
+bandit1@bandit:~$ cat /home/bandit/*
+cat: '/home/bandit/*': No such file or directory
+bandit1@bandit:~$ cat /home/bandit1/*
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+bandit1@bandit:~$ cat ./-
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+bandit1@bandit:~$ cat $(pwd)/*
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+bandit1@bandit:~$ cat $(pwd)/_
+cat: /home/bandit1/_: No such file or directory
+bandit1@bandit:~$ cat $(pwd)/-
+rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+bandit1@bandit:~$ 
+
+3) 
+
+bandit2@bandit:~$ ls
+spaces in this filename
+bandit2@bandit:~$ cat 
+.bash_logout             .bashrc                  .profile                 spaces in this filename
+bandit2@bandit:~$ cat 
+.bash_logout             .bashrc                  .profile                 spaces in this filename
+bandit2@bandit:~$ cat spaces\ in\ this\ filename 
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ cat sp*
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ cat *name
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ cat *this*
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ pwd
+/home/bandit2
+bandit2@bandit:~$ cat /home/bandit
+bandit0/      bandit13/     bandit18/     bandit22/     bandit27/     bandit29-git/ bandit31-git/ bandit6/
+bandit1/      bandit14/     bandit19/     bandit23/     bandit27-git/ bandit3/      bandit32/     bandit7/
+bandit10/     bandit15/     bandit2/      bandit24/     bandit28/     bandit30/     bandit33/     bandit8/
+bandit11/     bandit16/     bandit20/     bandit25/     bandit28-git/ bandit30-git/ bandit4/      bandit9/
+bandit12/     bandit17/     bandit21/     bandit26/     bandit29/     bandit31/     bandit5/      
+bandit2@bandit:~$ cat /home/bandit2/
+.bash_logout             .bashrc                  .profile                 spaces in this filename
+bandit2@bandit:~$ cat /home/bandit2/spaces\ in\ this\ filename 
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ cat /home/bandit2/*
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+bandit2@bandit:~$ pwd
+/home/bandit2
+bandit2@bandit:~$ cat $(pwd)/*
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+
+4)
+
+bandit3@bandit:~$ ls
+inhere
+bandit3@bandit:~$ ls inhere/
+bandit3@bandit:~$ ls -a inhere/
+.  ..  .hidden
+bandit3@bandit:~$ find .
+.
+./.profile
+./.bashrc
+./.bash_logout
+./inhere
+./inhere/.hidden
+bandit3@bandit:~$ cat ./inhere/.hidden 
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+bandit3@bandit:~$ find . -type f
+./.profile
+./.bashrc
+./.bash_logout
+./inhere/.hidden
+bandit3@bandit:~$ find . -type a
+find: Unknown argument to -type: a
+bandit3@bandit:~$ find . -type f -printf "%f\t$p\t$u\t$g\t$m\n" | column -t
+.profile
+.bashrc
+.bash_logout
+.hidden
+bandit3@bandit:~$ find . -type f -printf "%f\t$p\t$u\t$g\t$m\n" | column -t
+.profile
+.bashrc
+.bash_logout
+.hidden
+bandit3@bandit:~$ find . -type f -printf "%f\t$p\t$u\t$g\t$m\n"
+.profile
+.bashrc
+.bash_logout
+.hidden
+bandit3@bandit:~$ find . -type f -printf "%f\t%p\t%u\t%g\t%m\n" | column -t
+.profile      ./.profile        root     root     644
+.bashrc       ./.bashrc         root     root     644
+.bash_logout  ./.bash_logout    root     root     644
+.hidden       ./inhere/.hidden  bandit4  bandit3  640
+bandit3@bandit:~$ find . -name .hidden
+./inhere/.hidden
+bandit3@bandit:~$ find . -name .hidden | xargs cat
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+bandit3@bandit:~$ find . -type f | xargs cat
+# ~/.profile: executed by the command interpreter for login shells.
+# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
+# exists.
+# see /usr/share/doc/bash/examples/startup-files for examples.
+# the files are located in the bash-doc package.
+
+# the default umask is set in /etc/profile; for setting the umask
+# for ssh logins, install and configure the libpam-umask package.
+#umask 022
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+case $- in
+    *i*) ;;
+      *) return;;
+esac
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# If set, the pattern "**" used in a pathname expansion context will
+# match all files and zero or more directories and subdirectories.
+#shopt -s globstar
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (used in the prompt below)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+    debian_chroot=$(cat /etc/debian_chroot)
+fi
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color|*-256color) color_prompt=yes;;
+esac
+
+# uncomment for a colored prompt, if the terminal has the capability; turned
+# off by default to not distract the user: the focus in a terminal window
+# should be on the output of commands, not on the prompt
+#force_color_prompt=yes
+
+if [ -n "$force_color_prompt" ]; then
+    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
+    else
+        color_prompt=
+    fi
+fi
+
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+fi
+unset color_prompt force_color_prompt
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    ;;
+*)
+    ;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+# ~/.bash_logout: executed by bash(1) when login shell exits.
+
+# when leaving the console clear the screen to increase privacy
+
+if [ "$SHLVL" = 1 ]; then
+    [ -x /usr/bin/clear_console ] && /usr/bin/clear_console -q
+fi
+2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+bandit3@bandit:~$ ll
+total 24
+drwxr-xr-x  3 root root 4096 Sep  1 06:30 ./
+drwxr-xr-x 49 root root 4096 Sep  1 06:30 ../
+-rw-r--r--  1 root root  220 Jan  6  2022 .bash_logout
+-rw-r--r--  1 root root 3771 Jan  6  2022 .bashrc
+drwxr-xr-x  2 root root 4096 Sep  1 06:30 inhere/
+-rw-r--r--  1 root root  807 Jan  6  2022 .profile
+bandit3@bandit:~$ find . -type f | xargs grep "leaving"
+./.bash_logout:# when leaving the console clear the screen to increase privacy
+bandit3@bandit:~$ 
+
+
+5)
+
+
+bandit4@bandit:~$ ls
+inhere
+bandit4@bandit:~$ ls -la inhere/
+total 48
+drwxr-xr-x 2 root    root    4096 Sep  1 06:30 .
+drwxr-xr-x 3 root    root    4096 Sep  1 06:30 ..
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file00
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file01
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file02
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file03
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file04
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file05
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file06
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file07
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file08
+-rw-r----- 1 bandit5 bandit4   33 Sep  1 06:30 -file09
+bandit4@bandit:~$ file inhere/
+inhere/: directory
+bandit4@bandit:~$ file inhere/*
+inhere/-file00: OpenPGP Public Key
+inhere/-file01: data
+inhere/-file02: data
+inhere/-file03: data
+inhere/-file04: data
+inhere/-file05: data
+inhere/-file06: data
+inhere/-file07: ASCII text
+inhere/-file08: data
+inhere/-file09: data
+bandit4@bandit:~$ find . -name -file* | xargs file inhere/*
+inhere/-file00:   OpenPGP Public Key
+inhere/-file01:   data
+inhere/-file02:   data
+inhere/-file03:   data
+inhere/-file04:   data
+inhere/-file05:   data
+inhere/-file06:   data
+inhere/-file07:   ASCII text
+inhere/-file08:   data
+inhere/-file09:   data
+./inhere/-file03: data
+./inhere/-file04: data
+./inhere/-file09: data
+./inhere/-file07: ASCII text
+./inhere/-file08: data
+./inhere/-file06: data
+./inhere/-file05: data
+./inhere/-file01: data
+./inhere/-file02: data
+./inhere/-file00: OpenPGP Public Key
+bandit4@bandit:~$ find . -name -file* | xargs file
+./inhere/-file03: data
+./inhere/-file04: data
+./inhere/-file09: data
+./inhere/-file07: ASCII text
+./inhere/-file08: data
+./inhere/-file06: data
+./inhere/-file05: data
+./inhere/-file01: data
+./inhere/-file02: data
+./inhere/-file00: OpenPGP Public Key
+bandit4@bandit:~$ file inhere/* | xargs cat
+cat: 'inhere/-file00:': No such file or directory
+cat: OpenPGP: No such file or directory
+cat: Public: No such file or directory
+cat: Key: No such file or directory
+cat: 'inhere/-file01:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file02:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file03:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file04:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file05:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file06:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file07:': No such file or directory
+cat: ASCII: No such file or directory
+cat: text: No such file or directory
+cat: 'inhere/-file08:': No such file or directory
+cat: data: No such file or directory
+cat: 'inhere/-file09:': No such file or directory
+cat: data: No such file or directory
+bandit4@bandit:~$ find . -name -file* | cat
+./inhere/-file03
+./inhere/-file04
+./inhere/-file09
+./inhere/-file07
+./inhere/-file08
+./inhere/-file06
+./inhere/-file05
+./inhere/-file01
+./inhere/-file02
+./inhere/-file00
+bandit4@bandit:~$ find . -name -file*
+./inhere/-file03
+./inhere/-file04
+./inhere/-file09
+./inhere/-file07
+./inhere/-file08
+./inhere/-file06
+./inhere/-file05
+./inhere/-file01
+./inhere/-file02
+./inhere/-file00
+bandit4@bandit:~$ find . -name -file* | xargs cat
+���&���l���r�▒QEd8�tQ׼��e����O
+
+                              ���ٷxw�Diz�;�B���m�z��������(�J,l6��e�ؐ��PT4"��:�����~`�qlrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+�O��\�p�1سNF���z�#Z�Z`�#ї
+\^�f����s�_��c�$!C��j�?迟�Mt��!��>E�+�����"�K�bg
+                                                ����
+��I=4▒q$`8S�͛S����IE����2;�G)=I��O� 
+                                   $܌۶&������/v���%���Q�6
+                                                         ▒�V����gH��b���v��Qȇ�bandit4@bandit:~$ 
+bandit4@bandit:~$ file inhere/*
+inhere/-file00: OpenPGP Public Key
+inhere/-file01: data
+inhere/-file02: data
+inhere/-file03: data
+inhere/-file04: data
+inhere/-file05: data
+inhere/-file06: data
+inhere/-file07: ASCII text
+inhere/-file08: data
+inhere/-file09: data
+bandit4@bandit:~$ cat inhere/file07
+cat: inhere/file07: No such file or directory
+bandit4@bandit:~$ cat inhere/-file07
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+bandit4@bandit:~$ cat $(find . -name -file07)
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+
+6)
+
+cat /etc/passwd | grep "^root$" -n
+cat /etc/passwd | sed "/^\s*$/d"
+cat /etc/passwd | awk 'NR==1999'
+
+bandit5@bandit:~$ ls
+inhere
+bandit5@bandit:~$ find . -type f -re
+-readable   -regex      -regextype  
+bandit5@bandit:~$ find . -type f -readable -exec-bash: COMP_WORDS: bad array subscript
+-bash: COMP_WORDS: bad array subscript
+-bash: COMP_WORDS: bad array subscript
+                  ^C
+bandit5@bandit:~$ find . -type f -readable ! -executable 
+./.profile
+./.bashrc
+./.bash_logout
+./inhere/maybehere04/spaces file2
+./inhere/maybehere04/.file2
+./inhere/maybehere04/-file2
+./inhere/maybehere07/spaces file2
+./inhere/maybehere07/.file2
+./inhere/maybehere07/-file2
+./inhere/maybehere15/spaces file2
+./inhere/maybehere15/.file2
+./inhere/maybehere15/-file2
+./inhere/maybehere05/spaces file2
+./inhere/maybehere05/.file2
+./inhere/maybehere05/-file2
+./inhere/maybehere19/spaces file2
+./inhere/maybehere19/.file2
+./inhere/maybehere19/-file2
+./inhere/maybehere06/spaces file2
+./inhere/maybehere06/.file2
+./inhere/maybehere06/-file2
+./inhere/maybehere01/spaces file2
+./inhere/maybehere01/.file2
+./inhere/maybehere01/-file2
+./inhere/maybehere17/spaces file2
+./inhere/maybehere17/.file2
+./inhere/maybehere17/-file2
+./inhere/maybehere12/spaces file2
+./inhere/maybehere12/.file2
+./inhere/maybehere12/-file2
+./inhere/maybehere16/spaces file2
+./inhere/maybehere16/.file2
+./inhere/maybehere16/-file2
+./inhere/maybehere10/spaces file2
+./inhere/maybehere10/.file2
+./inhere/maybehere10/-file2
+./inhere/maybehere08/spaces file2
+./inhere/maybehere08/.file2
+./inhere/maybehere08/-file2
+./inhere/maybehere03/spaces file2
+./inhere/maybehere03/.file2
+./inhere/maybehere03/-file2
+./inhere/maybehere11/spaces file2
+./inhere/maybehere11/.file2
+./inhere/maybehere11/-file2
+./inhere/maybehere14/spaces file2
+./inhere/maybehere14/.file2
+./inhere/maybehere14/-file2
+./inhere/maybehere13/spaces file2
+./inhere/maybehere13/.file2
+./inhere/maybehere13/-file2
+./inhere/maybehere00/spaces file2
+./inhere/maybehere00/.file2
+./inhere/maybehere00/-file2
+./inhere/maybehere18/spaces file2
+./inhere/maybehere18/.file2
+./inhere/maybehere18/-file2
+./inhere/maybehere09/spaces file2
+./inhere/maybehere09/.file2
+./inhere/maybehere09/-file2
+./inhere/maybehere02/spaces file2
+./inhere/maybehere02/.file2
+./inhere/maybehere02/-file2
+bandit5@bandit:~$ find . -type f -readable ! -executable -sixe 1033c
+find: unknown predicate `-sixe'
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c
+./inhere/maybehere07/.file2
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        bandit5@bandit:~$ 
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat | xargs
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+bandit5@bandit:~$ 
+bandit5@bandit:~$ 
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat | sed "s/^ *//"
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat | sed "/^\s*$/d"
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat | sed "/^\s*$/d" | grep -n
+Usage: grep [OPTION]... PATTERNS [FILE]...
+Try 'grep --help' for more information.
+bandit5@bandit:~$ find . -type f -readable ! -executable -size 1033c | xargs cat | sed "/^\s*$/d"
+P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+7)
+
+
+to kill the computer: mv /* /dev/null
+
+stdin is correct
+
+stdr is error
+
+firefox > /dev/null 2>&1 
+
+firefox > /dev/null 2>&1 &
+
+this second & means that the processes is working like a background 
+
+firefox &
+
+if we want to run firefox regardeless, we use disown 
+
+disown -a or disown
+
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c
+find: ‘/var/tmp/shujaa29’: Permission denied
+find: ‘/var/tmp/systemd-private-18cab4cba0e045e3983f519536c3a0dc-ModemManager.service-OXfcPL’: Permission denied
+find: ‘/var/tmp/systemd-private-18cab4cba0e045e3983f519536c3a0dc-systemd-timedated.service-Jrt6hB’: Permission denied
+find: ‘/var/tmp/systemd-private-18cab4cba0e045e3983f519536c3a0dc-systemd-logind.service-1cxakZ’: Permission denied
+find: ‘/var/tmp/systemd-private-18cab4cba0e045e3983f519536c3a0dc-chrony.service-3VB5Mm’: Permission denied
+find: ‘/var/tmp/systemd-private-18cab4cba0e045e3983f519536c3a0dc-systemd-resolved.service-lLt04e’: Permission denied
+find: ‘/var/snap/lxd/common/lxd’: Permission denied
+find: ‘/var/lib/amazon’: Permission denied
+find: ‘/var/lib/chrony’: Permission denied
+find: ‘/var/lib/private’: Permission denied
+find: ‘/var/lib/udisks2’: Permission denied
+find: ‘/var/lib/snapd/void’: Permission denied
+find: ‘/var/lib/snapd/cookie’: Permission denied
+find: ‘/var/lib/ubuntu-advantage/private’: Permission denied
+find: ‘/var/lib/update-notifier/package-data-downloads/partial’: Permission denied
+find: ‘/var/lib/apt/lists/partial’: Permission denied
+/var/lib/dpkg/info/bandit7.password
+find: ‘/var/lib/polkit-1’: Permission denied
+find: ‘/var/cache/pollinate’: Permission denied
+find: ‘/var/cache/private’: Permission denied
+find: ‘/var/cache/ldconfig’: Permission denied
+find: ‘/var/cache/apt/archives/partial’: Permission denied
+find: ‘/var/cache/apparmor/c47eabf7.0’: Permission denied
+find: ‘/var/cache/apparmor/e10c1cf9.0’: Permission denied
+find: ‘/var/log/amazon’: Permission denied
+find: ‘/var/log/chrony’: Permission denied
+find: ‘/var/log/private’: Permission denied
+find: ‘/var/log/unattended-upgrades’: Permission denied
+find: ‘/var/spool/cron/crontabs’: Permission denied
+find: ‘/var/spool/rsyslog’: Permission denied
+find: ‘/var/spool/bandit24’: Permission denied
+find: ‘/tmp’: Permission denied
+find: ‘/boot/efi’: Permission denied
+find: ‘/proc/tty/driver’: Permission denied
+find: ‘/proc/2308/task/2308/fd/6’: No such file or directory
+find: ‘/proc/2308/task/2308/fdinfo/6’: No such file or directory
+find: ‘/proc/2308/fd/5’: No such file or directory
+find: ‘/proc/2308/fdinfo/5’: No such file or directory
+find: ‘/run/chrony’: Permission denied
+find: ‘/run/udisks2’: Permission denied
+find: ‘/run/user/11010’: Permission denied
+find: ‘/run/user/11028’: Permission denied
+find: ‘/run/user/8003’: Permission denied
+find: ‘/run/user/11007’: Permission denied
+find: ‘/run/user/11003’: Permission denied
+find: ‘/run/user/11019’: Permission denied
+find: ‘/run/user/11022’: Permission denied
+find: ‘/run/user/11031’: Permission denied
+find: ‘/run/user/11009’: Permission denied
+find: ‘/run/user/11015’: Permission denied
+find: ‘/run/user/11002’: Permission denied
+find: ‘/run/user/11004’: Permission denied
+find: ‘/run/user/11001’: Permission denied
+find: ‘/run/user/11000’: Permission denied
+find: ‘/run/user/11024’: Permission denied
+find: ‘/run/user/11006/systemd/inaccessible/dir’: Permission denied
+find: ‘/run/user/11025’: Permission denied
+find: ‘/run/user/11016’: Permission denied
+find: ‘/run/user/11023’: Permission denied
+find: ‘/run/user/11029’: Permission denied
+find: ‘/run/user/11011’: Permission denied
+find: ‘/run/user/11008’: Permission denied
+find: ‘/run/user/11005’: Permission denied
+find: ‘/run/user/11021’: Permission denied
+find: ‘/run/user/11012’: Permission denied
+find: ‘/run/user/11013’: Permission denied
+find: ‘/run/user/11026’: Permission denied
+find: ‘/run/user/11032’: Permission denied
+find: ‘/run/user/11020’: Permission denied
+find: ‘/run/user/11027’: Permission denied
+find: ‘/run/user/11014’: Permission denied
+find: ‘/run/sudo’: Permission denied
+find: ‘/run/screen/S-bandit2’: Permission denied
+find: ‘/run/screen/S-bandit25’: Permission denied
+find: ‘/run/screen/S-bandit22’: Permission denied
+find: ‘/run/screen/S-bandit4’: Permission denied
+find: ‘/run/screen/S-bandit21’: Permission denied
+find: ‘/run/screen/S-bandit24’: Permission denied
+find: ‘/run/screen/S-bandit28’: Permission denied
+find: ‘/run/screen/S-bandit23’: Permission denied
+find: ‘/run/screen/S-bandit20’: Permission denied
+find: ‘/run/cryptsetup’: Permission denied
+find: ‘/run/log/journal/ec28a01946fae615807db0114213002c’: Permission denied
+find: ‘/run/lvm’: Permission denied
+find: ‘/run/credentials/systemd-sysusers.service’: Permission denied
+find: ‘/run/systemd/empty’: Permission denied
+find: ‘/run/systemd/propagate’: Permission denied
+find: ‘/run/systemd/unit-root’: Permission denied
+find: ‘/run/systemd/inaccessible/dir’: Permission denied
+find: ‘/run/lock/lvm’: Permission denied
+find: ‘/snap/core20/1587/etc/ssl/private’: Permission denied
+find: ‘/snap/core20/1587/root’: Permission denied
+find: ‘/snap/core20/1587/var/cache/ldconfig’: Permission denied
+find: ‘/snap/core20/1587/var/cache/private’: Permission denied
+find: ‘/snap/core20/1587/var/lib/private’: Permission denied
+find: ‘/snap/core20/1587/var/lib/snapd/void’: Permission denied
+find: ‘/snap/core18/2538/etc/ssl/private’: Permission denied
+find: ‘/snap/core18/2538/root’: Permission denied
+find: ‘/snap/core18/2538/var/cache/ldconfig’: Permission denied
+find: ‘/snap/core18/2538/var/lib/private’: Permission denied
+find: ‘/dev/shm/eic-hostkey-yAlUwEFK’: Permission denied
+find: ‘/sys/kernel/tracing’: Permission denied
+find: ‘/sys/kernel/debug’: Permission denied
+find: ‘/sys/fs/pstore’: Permission denied
+find: ‘/sys/fs/bpf’: Permission denied
+find: ‘/home/bandit30-git’: Permission denied
+find: ‘/home/bandit31-git’: Permission denied
+find: ‘/home/bandit5/inhere’: Permission denied
+find: ‘/home/ubuntu’: Permission denied
+find: ‘/home/bandit29-git’: Permission denied
+find: ‘/home/bandit28-git’: Permission denied
+find: ‘/home/bandit27-git’: Permission denied
+find: ‘/etc/sudoers.d’: Permission denied
+find: ‘/etc/multipath’: Permission denied
+find: ‘/etc/ssl/private’: Permission denied
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+find: ‘/root’: Permission denied
+find: ‘/lost+found’: Permission denied
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+/var/lib/dpkg/info/bandit7.password
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | cat
+/var/lib/dpkg/info/bandit7.password
+bandit6@bandit:~$ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null | xargs cat
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+
+8)
+
+
+bandit7@bandit:~$ cat data.txt | grep "millionth"
+millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ cat data.txt | wc -l
+98567
+bandit7@bandit:~$ cat data.txt | wc -c
+4184396
+bandit7@bandit:~$ grep "millionth" data.txt 
+millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ awk "millionth" data.txt 
+bandit7@bandit:~$ awk "/millionth/" data.txt 
+millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ wak "/millionth/" data.txt | awk '{print $2}
+> ^C
+bandit7@bandit:~$ wak "/millionth/" data.txt | awk '{print $2}'
+Command 'wak' not found, did you mean:
+  command 'sak' from deb seqan-apps (2.4.0+dfsg-14ubuntu1)
+  command 'kak' from deb kakoune (2020.09.01-3)
+  command 'wmk' from deb wml (2.32.0~ds1-1)
+  command 'awk' from deb gawk (1:5.1.0-1build3)
+  command 'awk' from deb mawk (1.3.4.20200120-3)
+  command 'awk' from deb original-awk (2018-08-27-1)
+  command 'wrk' from deb wrk (4.1.0-3build1)
+Try: apt install <deb name>
+bandit7@bandit:~$ wak '/millionth/' data.txt | awk '{print $2}'
+Command 'wak' not found, did you mean:
+  command 'wmk' from deb wml (2.32.0~ds1-1)
+  command 'wrk' from deb wrk (4.1.0-3build1)
+  command 'awk' from deb gawk (1:5.1.0-1build3)
+  command 'awk' from deb mawk (1.3.4.20200120-3)
+  command 'awk' from deb original-awk (2018-08-27-1)
+  command 'kak' from deb kakoune (2020.09.01-3)
+  command 'sak' from deb seqan-apps (2.4.0+dfsg-14ubuntu1)
+Try: apt install <deb name>
+bandit7@bandit:~$ awk '/millionth/' data.txt | awk '{print $2}'
+TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ awk '/millionth/' data.txt | awk 'NF{print $NF}
+> ^C
+bandit7@bandit:~$ awk '/millionth/' data.txt | awk 'NF{print $NF}'
+TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ awk '/millionth/' data.txt | rev
+PvBrWi5kTS52mwNx9S0KteTvX0CZKSET        htnoillim
+bandit7@bandit:~$ awk '/millionth/' data.txt | rev | awk '{print $1}'
+PvBrWi5kTS52mwNx9S0KteTvX0CZKSET
+bandit7@bandit:~$ grep 'millionth' data.txt -n
+3521:millionth  TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ awk 'NR==3521' data.txt 
+millionth       TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+bandit7@bandit:~$ 
+
+
+9)
+
+
+cat data.txt | wc -l
+
+
+cat data.txt | sort
+
+cat data.txt | sort | uniq
+
+cat data.txt | sort | uniq -u
+
+sort data.txt | xargs uniq -u
+
+unique data.txt
+
+bandit8@bandit:~$ unique data.txt
+Command 'unique' not found, but can be installed with:
+apt install john
+Please ask your administrator.
+bandit8@bandit:~$ sort data.txt | xargs uni
+unicode_start  unicode_stop   uniq           unix_chkpwd    unix_update    
+bandit8@bandit:~$ sort data.txt | xargs uniq -u
+uniq: extra operand ‘0OvPFQCx2OI01VN7AwqUcOd4cqR9Ecg9’
+Try 'uniq --help' for more information.
+bandit8@bandit:~$ sort data.txt | xargs uniq
+uniq: extra operand ‘0OvPFQCx2OI01VN7AwqUcOd4cqR9Ecg9’
+Try 'uniq --help' for more information.
+bandit8@bandit:~$ cat data.txt | sort | uniq -u
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+bandit8@bandit:~$ sort data.txt | uniq -u
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+
+
+10)
+
+bash has seq
+
+seq 1 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+    ~/Documents/scripting_bash  touch loop.sh                                                                         ✔ 
+    ~/Documents/scripting_bash  chmod +x !$                                                                           ✔ 
+chmod +x loop.sh
+    ~/Documents/scripting_bash  nano !$                                                                               ✔ 
+nano loop.sh
+    ~/Documents/scripting_bash  ./loop.sh                                                                 
+
+
+bandit9@bandit:~$ strings data.txt 
+;*1}Kf
+z!d2
+x0&h
+=id6
+[(V#
+IkSR3(8|
+11u"
+Kw5-T
+j6.4
+w7+R
+Jwh(
+-q|?v
+xPAF
+bd]?G
+========== the
+X3y9
++v((
+%qdcR;
+gO=89
+        |<?
+deG3K
+gs):
+t7.33
+5+&R=
+u5`H
+'"m
+N_]V
+vXC/*
+        af|lJ
+1XWa)uU
+sa@g
+V>%=
+VcYEf
+7QCCD3
+aqnwr_
+0"_P
+/5un
+>i(bkX
+&VJ 
+V"{D
+h})|
+RW";
+/Oxj
+        M]x
+]skZ
+Tml0
+J|9o)
+Hgj&
+|ji?
+G#D1
+vGSj~s
+nqk9
+A@wm
+I7tOj!S" 
+YZ\kp
+vZynX
+.m7G"
+}%'h
+?rU6
+S%]`E
+zUr<O
+odfl
+kRlyi
+\@dm&
+Ho      T
+5L7'
+bu========== password
+iwAw=
+N       !h
+,/4n
+M'j=_
+RF];@
+[6L!r.
+\!Q->q
+Vwcd
+<LN     W
+w|Bj
+j<jv
+NMHt
+s{ve7
+IHkJd
+Qyf}jl
+;4i?2
+*w-o    lT]
+4y;C
+ItJ:%
+iih3f
+4iu========== is
+e?K1
+528x
+:fE-
+2;dC
+B:o5
+,J*G
+iN)P_)
+Ddh<
+fab,6
+hTr$ba%j
+@n_$
+qzUS
+NYq&
+rau5
+VD0+TG68
+DP)G
+*I:?
+ t`N
+{8/m
+I!#;
+]^_'
+Cv-*
+ViX^
+VMw!
+xOP-A
+'IzW
+u3/P
+QMM^
+'$7$
+'HXK
+&Qq}
+w:WcS
+fZ)S~
+b]m(R
+b~==P
+}{y[
+|"+Iw
+to*q_pX
+`?XZ
+%c6.>u
+ED=Fpe
+m&s(
+<t<;~g
+DW{M
+UcsZ
+X4oUZ
+fdI};B
+rBSR
+^[N6
+9AAgp
+,=fX
+&57!
+D<~e
+|$pd
+$57mk[
+P@Li
+x=f+
+GMmg
+If:M
+L!m!3@G_
+3wD`
+lR?bT
+&[nq
+[LDQe
+fJK!7
++'-GY7
+T$~z5,C
+^f"(
+r.d9
+o(H:
+^#4@-
+C!zz
+\!x!
+KuFM
+O=6pF
+FGhG
+Nql?
+U>mz~
+pV+G
+p5VP
+vl2C
+H[90
+        WVm
+?71I
+B?Kd]
+zLY<
+OqVlFu
+@6~aC
+#b]\
+$)Ee
+'![5
+[EnpM\
+C&dQ
+=do%
+Tld/
+{Ef 
+B HW&
+``      k
+TB+&
+!oCc2
+O]>,
+YII^
+n9^D
+1k&W_
+`zG|
+pUu;/
+CYSN
+XzE*
+@*3x
+KEr4tlO
+}*W<
+$0[&
+h)m^
+#n)7~y
+]V-h
+?Tw0
+zuZ}
+|K;&[#
+G2@i
+:26=
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+~`2U
+GCF;
+s??:S
+$B2Q
+#a1(
+=@dZ
++DAR
+6+Xx
+,srs
+,/>~    {
+L,|$
+xy /
+{~8@+
+T3T@
+{X%4
+(]92
+i$2-
+u-;=
+"kI[
+>w:O
+FP(:`
+'kob
+F2%b
+=#U?
+*E`+
+;hHk
+g"O4
+yNY{l[
+{Pse
+ELE#
+mU6Bo
+S`Xr
+E%1v
+\R$_
+C&y9
+s:?P
+9ste
+f%0sF
+JIAU
+2BEK=q
+)7Iy
+N{`|
+ Xn`
+u/_[
+@!6=
+bandit9@bandit:~$ strings data.txt | grep '====='
+========== the
+bu========== password
+4iu========== is
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '=====' | tail -n1
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '=====' | tail -n 2
+4iu========== is
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '=====' | tail -n 1
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '====' | while read line; do echo $line; done
+========== the
+bu========== password
+4iu========== is
+========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '====' | while read line; do echo "Hello line:  $line"; done
+Hello line:  ========== the
+Hello line:  bu========== password
+Hello line:  4iu========== is
+Hello line:  ========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ strings data.txt | grep '====' | while read line; do echo "Hello line: $line"; done
+Hello line: ========== the
+Hello line: bu========== password
+Hello line: 4iu========== is
+Hello line: ========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ contador=1; strings data.txt | grep '====' | while read line; do echo "Hello line $contador: $line"; let contador; done
+Hello line 1: ========== the
+Hello line 1: bu========== password
+Hello line 1: 4iu========== is
+Hello line 1: ========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+bandit9@bandit:~$ contador=1; strings data.txt | grep '====' | while read line; do echo "Hello line $contador: $line"; let contador+; done
+Hello line 1: ========== the
+-bash: let: contador+: syntax error: operand expected (error token is "+")
+Hello line 1: bu========== password
+-bash: let: contador+: syntax error: operand expected (error token is "+")
+Hello line 1: 4iu========== is
+-bash: let: contador+: syntax error: operand expected (error token is "+")
+Hello line 1: ========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+-bash: let: contador+: syntax error: operand expected (error token is "+")
+bandit9@bandit:~$ 
+bandit9@bandit:~$ 
+bandit9@bandit:~$ 
+bandit9@bandit:~$ 
+bandit9@bandit:~$ 
+bandit9@bandit:~$ contador=1; strings data.txt | grep '====' | while read line; do echo "Hello line $contador: $line"; let contador+=1; done
+Hello line 1: ========== the
+Hello line 2: bu========== password
+Hello line 3: 4iu========== is
+Hello line 4: ========== G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+bandit9@bandit:~$ contador=1; strings data.txt | grep '====' | while read line; do echo "Hello line $contador: $line"; let contador+=1; done | awk 'NR==4'| awk 'NF{print $NF}'
+G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
